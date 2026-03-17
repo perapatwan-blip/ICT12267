@@ -1,34 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="as5.css">
-    <title>Web Design Perapat Wanna</title>
+    <title>MOVIE HD | 68026233</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Kanit', sans-serif; background-color: #121212; color: white; }
+        .navbar { background-color: rgba(0, 0, 0, 0.9) !important; border-bottom: 2px solid #e50914; }
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://www.tophitthailand.com/wp-content/uploads/2022/01/Netflix-Banner.jpg');
+            background-size: cover; height: 400px; display: flex; align-items: center; justify-content: center;
+        }
+        .card { background-color: #1f1f1f; border: none; transition: 0.3s; color: white; }
+        .card:hover { transform: translateY(-10px); }
+        .modal-content { background-color: #252525; color: white; border: 1px solid #444; }
+        footer { background-color: #000; padding: 30px 0; border-top: 1px solid #333; }
+        .social-icons a { font-size: 2rem; margin: 0 15px; }
+        .fa-facebook { color: #1877F2; } .fa-instagram { color: #E4405F; } .fa-line { color: #06C755; }
+    </style>
 </head>
 <body>
-    <div class="hero">
-        <nav>
-            <img src="Logo SPU SIT/Logo SPU SIT_black.png" class="logo">
-            <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">How it work</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-            <div>
-                <a href="#" class="login-btn">Log in</a>
-                <a href="#" class="btn">Download app</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MOVIE <span style="color: red;">HD24/7</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ภาพยนตร์</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Transformers (2007)</a></li>
+                            <li><a class="dropdown-item" href="#">Iron Man (2008)</a></li>
+                            <li><a class="dropdown-item" href="#">Spider-Man 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อเรา</a></li>
+                </ul>
             </div>
-        </nav>
-
-        <div class="content">
-            <h1 class="anim">Make <br> New Friends</h1>
-            <p class="anim">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Deleniti saepe similique minus, minima tenetur nostrum maxime ipsa possimus quisquam at.</p>
-            <a href="#" class="btn anim">Join Now</a>
         </div>
+    </nav>
 
-        <img src="pic/ChatGPT Image 4.png" class="features-img anim">
+    <header class="hero-banner">
+        <h1 class="display-4 fw-bold">MOVIE HD</h1>
+    </header>
+
+    <div class="container my-5">
+        <h2 class="mb-4">รายการภาพยนตร์</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 p-2 text-center shadow">
+                    <img src="https://i.ebayimg.com/images/g/-sUAAOSwjRpZXlSZ/s-l1200.jpg" class="card-img-top rounded" alt="Transformers">
+                    <div class="card-body">
+                        <h5 class="card-title">Transformers (2007)</h5>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#m1">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 p-2 text-center shadow">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg" class="card-img-top rounded" alt="Iron Man">
+                    <div class="card-body">
+                        <h5 class="card-title">Iron Man (2008)</h5>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#m2">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 p-2 text-center shadow">
+                    <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p34442_p_v10_aq.jpg" class="card-img-top rounded" alt="Spider-Man 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Spider-Man 2</h5>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#m3">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="about" class="container my-5">
+        <hr style="border-color: #444;">
+        <h3>เกี่ยวกับเรา</h3>
+        <p class="text-secondary">ยินดีต้อนรับสู่เว็บดูหนังออนไลน์ จัดทำโดยนักศึกษา SPU SIT รหัส 68026233</p>
+    </div>
+
+    <div id="contact" class="container my-5">
+        <div class="card bg-white text-dark p-4 mx-auto" style="max-width: 700px;">
+            <h2 class="text-center mb-4">ติดต่อเรา</h2>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">ชื่อ-นามสกุล</label>
+                    <input type="text" class="form-control" placeholder="กรอกชื่อ-นามสกุล">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">อีเมล</label>
+                    <input type="email" class="form-control" placeholder="example@email.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ข้อความ</label>
+                    <textarea class="form-control" rows="3" placeholder="พิมพ์ข้อความของคุณ"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success px-4">ส่งข้อมูล</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://www.facebook.com/share/14Wva1wvymD/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/p.perapat_?igsh=MWU1Y3c2cHlnYzk3cg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://line.me/ti/p/4W7a3rc_bO" target="_blank"><i class="fab fa-line"></i></a>
+            </div>
+            <p class="mb-0">© 2026 Movie By Perapat Wanna 68026233</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="m1" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+        <div class="modal-header"><h5>Transformers (2007)</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body text-center">
+            <img src="https://static01.nyt.com/images/2007/07/02/arts/Trans1600.jpg" class="img-fluid mb-3 rounded shadow" alt="Poster">
+            <div class="text-start">
+                <p><strong>ผู้กำกับ:</strong> ไมเคิล เบย์ (Michael Bay)</p>
+                <p><strong>นักแสดงนำ:</strong> ไชอา ลาบัฟ, เมแกน ฟอกซ์</p>
+                <p><strong>เรื่องย่อ:</strong> การต่อสู้ของหุ่นยนต์ต่างดาวที่แฝงตัวมาบนโลกเพื่อตามหาแหล่งพลังงานมหาศาล</p>
+            </div>
+        </div>
+    </div></div></div>
+
+    <div class="modal fade" id="m2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+        <div class="modal-header"><h5>Iron Man (2008)</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body text-center">
+            <img src="https://media.revistagq.com/photos/5ec50516affc6618c4a2fd30/1:1/w_1000,h_1000,c_limit/iron-man-2008.jpg" class="img-fluid mb-3 rounded shadow" alt="Poster">
+            <div class="text-start">
+                <p><strong>ผู้กำกับ:</strong> จอน แฟวโร (Jon Favreau)</p>
+                <p><strong>นักแสดงนำ:</strong> โรเบิร์ต ดาวนีย์ จูเนียร์, กวินเน็ธ พัลโทรว์</p>
+                <p><strong>เรื่องย่อ:</strong> โทนี่ สตาร์ค มหาเศรษฐีที่สร้างชุดเกราะเหล็กสุดไฮเทคเพื่อปกป้องโลก</p>
+            </div>
+        </div>
+    </div></div></div>
+
+    <div class="modal fade" id="m3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+        <div class="modal-header"><h5>Spider-Man 2</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Spider-Man_2_USA_poster.jpg" class="img-fluid mb-3 rounded shadow" alt="Poster">
+            <div class="text-start">
+                <p><strong>ผู้กำกับ:</strong> แซม ไรมี (Sam Raimi)</p>
+                <p><strong>นักแสดงนำ:</strong> โทบีย์ แม็กไกวร์, เคิร์สเตน ดันสต์</p>
+                <p><strong>เรื่องย่อ:</strong> ปีเตอร์ ปาร์คเกอร์ ต้องเผชิญอุปสรรคชีวิตพร้อมการต่อสู้กับวายร้าย ด็อกเตอร์ อ็อกโตปุส</p>
+            </div>
+        </div>
+    </div></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
