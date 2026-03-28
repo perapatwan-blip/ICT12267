@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 3</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.spinner{
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 25px solid white;
+    border-top: 20px solid black;
+    background-color: red;
+    animation: spin 2.5s linear infinite;
+}
+
+.spinner2{
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 25px solid white;
+    border-top: 20px solid blueviolet;
+    background-color: orange;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>68026233 Perapat Wanna</h1>
+    <h2>เลขที่: 3 กลุ่มเรียน: 001</h2>
+
+    <div class="spinner"></div>
+    <div class="spinner2"></div>
+</div>
+
+</body>
+</html>
